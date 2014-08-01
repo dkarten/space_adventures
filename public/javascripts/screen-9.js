@@ -57,21 +57,23 @@ var animations = {
       $("#cmd-line").append("<br>");      
       if (arecibo[index] == ' ') {
         //do nothing 
-        $("#cmd-line").append("<br style='float: left;'>");
+       $("#cmd-line").html($("#cmd-line").html()+"<p></p>");
       } else if (arecibo[index] == 1) {
         $("#cmd-line").append("<div class='b-tile'></div>");    
       } else if (arecibo[index] == 0) {
         $("#cmd-line").append("<div class='w-tile'></div>");    
       }  
     } else {
+      
       if (arecibo[index] == ' ') {
-        //do nothing 
-        $("#cmd-line").append("<br style='float: left;'>");
+        //do nothing
+        $("#cmd-line").append("<div class='break-line'><p>&nbsp;</p></div>");  
       } else if (arecibo[index] == 1) {
         $("#cmd-line").append("<div class='b-tile'></div>");    
       } else if (arecibo[index] == 0) {
         $("#cmd-line").append("<div class='w-tile'></div>");    
-      }     
+      }
+      
     }
 
     if(index < arecibo.length - 1) {
